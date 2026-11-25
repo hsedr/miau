@@ -9,24 +9,7 @@
 </style>
 <img alt="Katze">
 <p></p>
-<script>
-const sprueche = [
-  "Ich hab vergessen, meinen Bildschirm zu sperren. Jetzt gehört er der Katze.",
-  "Mein Passwort ist „miau123“. War's schon immer.",
-  "Ich bringe morgen Kuchen für alle mit. 🎂",
-  "Ich bin eigentlich nur drei Katzen in einem Trenchcoat.",
-  "Win + L ist mir zu kompliziert.",
-  "Heute schon den Monitor gestreichelt?",
-  "Ich habe beschlossen, ab jetzt nur noch in Comic Sans zu schreiben.",
-  "Diese Katze hat gerade alle meine Tickets auf „Done“ gesetzt.",
-  "Ich lese meine Mails nur noch laut vor.",
-  "Bin kurz weg. Die Katze übernimmt das Daily.",
-];
-const img = document.querySelector("img"), p = document.querySelector("p");
-function neu() {
-  img.src = "https://cataas.com/cat?" + Date.now();
-  p.textContent = sprueche[Math.floor(Math.random() * sprueche.length)];
-}
-document.onclick = () => { document.documentElement.requestFullscreen?.().catch(() => {}); neu(); };
-neu();
+<script type="module">
+  import init from "./pkg/miau.js";
+  init();
 </script>
